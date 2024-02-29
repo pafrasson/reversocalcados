@@ -41,7 +41,7 @@ export const RecoverPasswordForm: React.FC = () => {
       setError('')
     } else {
       setError(
-        'There was a problem while attempting to send you a password reset email. Please try again.',
+        'Ocorreu um problema ao tentar enviar um e-mail de redefinição de senha. Por favor, tente novamente.',
       )
     }
   }, [])
@@ -50,38 +50,34 @@ export const RecoverPasswordForm: React.FC = () => {
     <Fragment>
       {!success && (
         <React.Fragment>
-          <h1>Recover Password</h1>
-          <div className={classes.formWrapper}>
-            <p>
-              {`Please enter your email below. You will receive an email message with instructions on
-              how to reset your password. To manage your all users, `}
-              <Link href="/admin/collections/users">login to the admin dashboard</Link>
-              {'.'}
-            </p>
-            <form onSubmit={handleSubmit(onSubmit)} className={classes.form}>
-              <Message error={error} className={classes.message} />
-              <Input
-                name="email"
-                label="Email Address"
-                required
-                register={register}
-                error={errors.email}
-                type="email"
-              />
-              <Button
-                type="submit"
-                appearance="primary"
-                label="Recover Password"
-                className={classes.submit}
-              />
-            </form>
-          </div>
+          <p>
+            Informe o email associado à conta para que possamos enviar o código para redefinir a senha.
+          </p>
+          <form onSubmit={handleSubmit(onSubmit)} className={classes.form}>
+            <Message error={error} className={classes.message} />
+            <Input
+              name="email"
+              label="Endereço de e-mail"
+              required
+              register={register}
+              error={errors.email}
+              type="email"
+            />
+            <Button
+              type="submit"
+              appearance="primary"
+              label="Solicitar código"
+              className={classes.submit}
+            />
+          </form>
         </React.Fragment>
       )}
       {success && (
         <React.Fragment>
-          <h1>Request submitted</h1>
-          <p>Check your email for a link that will allow you to securely reset your password.</p>
+          <h1>Solicitação Enviada</h1>
+          <p>
+            Verifique se há um link em seu e-mail que permitirá que você redefina sua senha com segurança.
+          </p>
         </React.Fragment>
       )}
     </Fragment>
