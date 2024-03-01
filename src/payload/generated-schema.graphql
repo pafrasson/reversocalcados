@@ -68,6 +68,7 @@ enum Page_Hero_type {
   highImpact
   mediumImpact
   lowImpact
+  customHero
 }
 
 """
@@ -1556,6 +1557,7 @@ enum Page_hero__type_Input {
   highImpact
   mediumImpact
   lowImpact
+  customHero
 }
 
 input Page_hero__richText_operator {
@@ -2475,6 +2477,7 @@ enum PageVersion_Version_Hero_type {
   highImpact
   mediumImpact
   lowImpact
+  customHero
 }
 
 type PageVersion_Version_Hero_Links {
@@ -3100,6 +3103,7 @@ enum versionsPage_version__hero__type_Input {
   highImpact
   mediumImpact
   lowImpact
+  customHero
 }
 
 input versionsPage_version__hero__richText_operator {
@@ -11634,6 +11638,7 @@ enum Page_Hero_type_MutationInput {
   highImpact
   mediumImpact
   lowImpact
+  customHero
 }
 
 input mutationPage_Hero_LinksInput {
@@ -11701,6 +11706,7 @@ enum PageUpdate_Hero_type_MutationInput {
   highImpact
   mediumImpact
   lowImpact
+  customHero
 }
 
 input mutationPageUpdate_Hero_LinksInput {
