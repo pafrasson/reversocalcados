@@ -37,11 +37,11 @@ export const CartPage: React.FC<{
         <Fragment>
           {cartIsEmpty ? (
             <div className={classes.empty}>
-              Your cart is empty.
+              Seu carrinho está vazio.
               {typeof productsPage === 'object' && productsPage?.slug && (
                 <Fragment>
                   {' '}
-                  <Link href={`/${productsPage.slug}`}>Click here</Link>
+                  <Link href={`/${productsPage.slug}`}>Clique aqui.</Link>
                   {` to shop.`}
                 </Fragment>
               )}
@@ -145,7 +145,7 @@ export const CartPage: React.FC<{
               <Button
                 className={classes.checkoutButton}
                 href={user ? '/checkout' : '/login?redirect=%2Fcheckout'}
-                label={user ? 'Checkout' : 'Login to checkout'}
+                label={user ? 'Checkout' : 'Login para checkout'}
                 appearance="primary"
               />
             </div>
